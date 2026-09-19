@@ -1,0 +1,27 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    background-color: #0f172a; 
+    color: #94a3b8;            
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+}
+.portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+.right-content {
+    width: 55%;
+    margin-left: 45%; 
+    padding: 96px 40px;
+}
+.section-text { margin-bottom: 20px; }
+
+/* Responsive for Mobile */
+@media (max-width: 992px) {
+    .portfolio-container { flex-direction: column; }
+    .right-content { width: 100%; margin-left: 0; padding: 24px; }
+}

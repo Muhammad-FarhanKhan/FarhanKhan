@@ -1,0 +1,135 @@
+/* resources/css/ProjectsArchive.css */
+
+.archive-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    background-color: #0f172a;
+    min-h: 100vh;
+}
+
+.back-home-box {
+    margin-bottom: 32px;
+}
+
+.back-link {
+    color: #5eead4; /* Cyan tint anchor hook */
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #f8fafc;
+}
+
+.archive-main-title {
+    color: #f8fafc;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.archive-subtitle {
+    color: #64748b;
+    font-size: 1.05rem;
+    margin-top: 8px;
+    margin-bottom: 60px;
+}
+
+/* TABLE FRAME GRAPHICS */
+.archive-table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Handles tiny screen widths automatically */
+}
+
+.archive-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.archive-table th {
+    color: #e2e8f0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(71, 85, 105, 0.3);
+}
+
+.archive-row {
+    border-bottom: 1px solid rgba(71, 85, 105, 0.15);
+    transition: background-color 0.3s ease;
+}
+
+/* Subtle glow rows overlay configuration */
+.archive-row:hover {
+    background-color: rgba(30, 41, 59, 0.3);
+}
+
+.archive-row td {
+    padding: 20px 16px;
+    vertical-align: middle;
+    font-size: 0.95rem;
+}
+
+.row-year {
+    color: #64748b;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.row-title {
+    color: #f8fafc;
+    font-weight: 600;
+}
+
+.row-made {
+    color: #94a3b8;
+}
+
+/* Micro Badge Tags */
+.archive-tags-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.archive-mini-tag {
+    background-color: rgba(30, 41, 59, 0.6);
+    color: #94a3b8;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.archive-row-link {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.3s ease;
+}
+
+.archive-row:hover .archive-row-link {
+    color: #5eead4; /* Triggers cyan on full row hover context */
+}
+
+.archive-arrow {
+    font-size: 0.75rem;
+}
+
+/* Mobile Specific Media Responsive Shifts */
+@media (max-width: 768px) {
+    .archive-container { padding: 40px 20px; }
+    .archive-main-title { font-size: 2.2rem; }
+    .hide-mobile { display: none; } /* Drops secondary metadata blocks on micro screen widths */
+    .archive-row td { padding: 16px 8px; }
+}

@@ -1,0 +1,157 @@
+/* resources/css/Home/Projects.css */
+
+.projects-section-wrapper {
+    scroll-margin-top: 96px;
+    margin-bottom: 120px;
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px; /* Cards ke darmiyan spacing */
+}
+
+/* Entire card is an anchor link link block setup */
+.project-card-link {
+    text-decoration: none;
+    display: block;
+}
+
+.project-card {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 24px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Subtle card hover focus glow overlay */
+.project-card-link:hover .project-card {
+    background-color: rgba(30, 41, 59, 0.4);
+    transform: translateY(-4px);
+}
+
+/* Project Visual Container Frame */
+.img-frame-placeholder {
+    background: #1e293b;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    height: 76px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 500;
+    transition: border-color 0.3s ease;
+}
+
+.project-card-link:hover .img-frame-placeholder {
+    border-color: rgba(94, 234, 212, 0.3); /* Border changes to teal subtly */
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Heading Typography elements */
+.project-title {
+    color: #e2e8f0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.project-card-link:hover .project-title {
+    color: #5eead4; /* Title text glows cyan on card hover state */
+}
+
+/* Dynamic gliding sliding arrow configuration */
+.inline-arrow {
+    display: inline-block;
+    margin-left: 4px;
+    font-size: 0.85rem;
+    opacity: 0;
+    transform: translate(-4px, 4px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    color: #5eead4;
+}
+
+.project-card-link:hover .inline-arrow {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.project-desc {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    margin-top: 6px;
+    line-height: 1.6;
+}
+
+/* Skills tag pills under project context description */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.skill-tag {
+    background-color: rgba(94, 234, 212, 0.1);
+    color: #5eead4;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* Archive Standalone View Archive Redirection Controls Button */
+.archive-button-container {
+    margin-top: 48px;
+    padding-left: 20px;
+}
+
+.view-archive-btn {
+    background: transparent;
+    color: #e2e8f0;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.view-archive-btn:hover {
+    color: #5eead4;
+    border-color: #5eead4;
+}
+
+.btn-arrow {
+    transition: transform 0.3s ease;
+}
+
+.view-archive-btn:hover .btn-arrow {
+    transform: translateX(6px); /* Arrow advances forward smoothly */
+}
+
+/* Mobile responsive stack layout query structural shifts */
+@media (max-width: 768px) {
+    .project-card {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 12px 0;
+    }
+    .img-frame-placeholder {
+        height: 100px;
+    }
+}
